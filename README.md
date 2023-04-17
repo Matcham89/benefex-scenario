@@ -121,7 +121,7 @@ terraform {
 # Deployment
 
 
-Navigate to the root file `benefex-scenario`
+Navigate to the root file `benefex-infrastructure`
 
 For deployment into the dev environment, review the `dev.tfvars` file to confirm the variables are correct.
 
