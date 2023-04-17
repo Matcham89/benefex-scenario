@@ -3,7 +3,6 @@
 
 The following Terraform code will deploy multiple resources.
 
-
 * API requirements
 
 * Service accounts

@@ -1,4 +1,4 @@
-project_id   = "genuine-sector-383615"
+project_id   = ""
 env          = "dev"
 region       = "europe-west2"
 vm_name      = "win-vm"

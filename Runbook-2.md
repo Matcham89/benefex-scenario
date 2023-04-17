@@ -21,10 +21,12 @@ Disk-04
 resource "google_compute_disk" "win_add_disk_04" {
   name = "${var.vm_disk_name}-${substr(var.region, 0, 2)}-04"
   type = var.vm_disk_type
-  zone = "${var.region}-a"
+  zone = "${var.region}-b"
   size = var.disk_size_gb
 }
 ```
+
+Ensure that the disk zone matches the zone of the vm it is going to be attached to (a/b/c)
 
 Attach the newly added drive to each vm by using the `attached_disk` block
 
@@ -36,7 +38,6 @@ This can be placed under the current attached disk
     device_name = google_compute_disk.win_add_disk_03.name
   }
 ```
-
 
 ```bash
  attached_disk {

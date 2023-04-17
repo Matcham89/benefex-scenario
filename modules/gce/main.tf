@@ -41,6 +41,11 @@ resource "google_compute_instance" "win_vm_01" {
     device_name = google_compute_disk.win_add_disk_01.name
   }
 
+   attached_disk {
+    source      = google_compute_disk.win_add_disk_03.id
+    device_name = google_compute_disk.win_add_disk_03.name
+  }
+
   network_interface {
     network    = var.vpc_network
     subnetwork = var.subnet
@@ -101,6 +106,12 @@ resource "google_compute_instance" "win_vm_02" {
     source      = google_compute_disk.win_add_disk_02.id
     device_name = google_compute_disk.win_add_disk_02.name
   }
+
+   attached_disk {
+    source      = google_compute_disk.win_add_disk_04.id
+    device_name = google_compute_disk.win_add_disk_04.name
+  }
+
   network_interface {
     network    = var.vpc_network
     subnetwork = var.subnet
@@ -139,4 +150,18 @@ resource "google_compute_snapshot" "snapdisk_02" {
   name        = "snapshot-${var.vm_disk_name}-${substr(var.region, 0, 2)}-02"
   source_disk = google_compute_disk.win_add_disk_02.name
   zone        = "${var.region}-b"
+}
+
+resource "google_compute_disk" "win_add_disk_03" {
+  name = "${var.vm_disk_name}-${substr(var.region, 0, 2)}-03"
+  type = var.vm_disk_type
+  zone = "${var.region}-a"
+  size = var.disk_size_gb
+}
+
+resource "google_compute_disk" "win_add_disk_04" {
+  name = "${var.vm_disk_name}-${substr(var.region, 0, 2)}-04"
+  type = var.vm_disk_type
+  zone = "${var.region}-b"
+  size = var.disk_size_gb
 }
