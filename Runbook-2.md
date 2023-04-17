@@ -49,7 +49,7 @@ This can be placed under the current attached disk
 Repeat the terraform deployment steps
 
 ```bash
-terraform init
+terraform init -backend-config="prefix=dev"
 ```
 
 ```bash

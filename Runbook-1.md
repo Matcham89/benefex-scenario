@@ -38,7 +38,7 @@ module "benefex_gce_us" {
 Repeat the terraform deployment steps
 
 ```bash
-terraform init
+terraform init -backend-config="prefix=dev"
 ```
 
 ```bash

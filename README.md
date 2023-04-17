@@ -144,7 +144,7 @@ Once the variables are confirmed, the deployment can be actioned.
 Run the following commands to deploy the infrastructure
 
 ```bash
-terraform init
+terraform init -backend-config="prefix=dev"
 ```
 
 The below command tells terraform to use the dev environment variables
@@ -204,7 +204,7 @@ module "benefex_gce_us" {
 Repeat the terraform deployment steps
 
 ```bash
-terraform init
+terraform init -backend-config="prefix=dev"
 ```
 
 ```bash
