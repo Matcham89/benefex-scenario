@@ -1,7 +1,7 @@
 
 # Overview
-
-The following Terraform code will deploy multiple resources.
+ 
+The following Terraform leavages custom modules populated with google cloud resources.
 
 * API requirements
 
