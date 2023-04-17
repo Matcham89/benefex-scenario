@@ -33,14 +33,14 @@ Communication between the end user and Compute Engine is possible via the Alloca
 
 ## Security
 
-The Compute VM has its own service account with the basic permissions. This can be amended and granted the required access in order to carry out future tasks. The  service accounts are created as part of the IaC. Google recommended best practises are advised when assigning roles.
+The Compute VM has its own service account with the basic permissions. This can be amended and granted the required access in order to carry out future tasks. The  service accounts are created as part of the IaC. Google recommended best practices are advised when assigning roles.
 
 <p>&nbsp;</p>
 
 
 ## GitOps
 
-Best practise advise is to add protection to the main/production branch in the repo.
+Best practise is to add protection to the main/production branch in the repo.
 
 
 | Branch  | Environment  | Protected 
@@ -51,14 +51,14 @@ Best practise advise is to add protection to the main/production branch in the r
 
 When introducing a feat into the code, it is advised to create a new branch, make changes, create a _PullRequest_ and merge.
 
-Any environment promotional should be subject to a peer review.
+Any environment promotion should be subject to a peer review.
 
 ## Future Improvements
 
 * Instead of using RDP to connect to the GCE, implement IAP as a secure connection service. This will remove the requirement for an external IP
 https://cloud.google.com/compute/docs/instances/connecting-to-windows
 
-* Use Managed Instance Groups in collbaration with IAP. Scalable and highly available
+* Use Managed Instance Groups in collaboration with IAP. Scalable and highly available
 https://cloud.google.com/compute/docs/instance-groups
 
 * GitOps deployment mechanism in collaboration with Workload Identity Federation
@@ -147,7 +147,7 @@ The below command tells terraform to use the dev environment variables
 terraform plan -var-file=dev.tfvars -out plan.yaml
 ```
 
-Review the plan, ensure you are happy with the preddicted deployment
+Review the plan, ensure you are happy with the predicted deployment
 
 ```bash
 terraform apply ./plan.yaml
@@ -206,7 +206,7 @@ terraform init
 terraform plan -var-file=dev.tfvars -out plan.yaml
 ```
 
-Review the plan, ensure you are happy with the preddicted deployment
+Review the plan, ensure you are happy with the predicted deployment
 
 ```bash
 terraform apply ./plan.yaml
