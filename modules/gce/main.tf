@@ -63,6 +63,7 @@ resource "google_compute_disk" "win_add_disk_01" {
   zone = "${var.region}-a"
   size = var.disk_size_gb
 }
+
 resource "google_compute_region_disk" "win_add_disk_01" {
   name                      = "region-${var.vm_disk_name}-${substr(var.region, 0, 2)}-01"
   snapshot                  = google_compute_snapshot.snapdisk_01.id
