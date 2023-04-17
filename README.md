@@ -16,6 +16,11 @@ The following Terraform code will deploy multiple resources.
 
 <p>&nbsp;</p>
 
+## High Availability 
+
+Regional persistent disk is a storage option that provides synchronous replication of data between two zones in a region. Regional persistent disks support HA services in Compute Engine
+https://cloud.google.com/compute/docs/disks/high-availability-regional-persistent-disk
+
 
 ## Networking
 
