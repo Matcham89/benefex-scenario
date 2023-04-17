@@ -57,4 +57,5 @@ variable "vm_image" {
 
 variable "subnet_range" {
   type = string
+  description = "subnet range that is going to be used by the vms"
 }
