@@ -10,6 +10,7 @@ variable "region" {
 
 variable "vpc_network" {
   type = string
+  description = "ID of the vpc network being used"
 }
 
 variable "subnet_range" {

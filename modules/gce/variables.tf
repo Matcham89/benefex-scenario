@@ -47,20 +47,26 @@ variable "vm_image" {
 
 variable "vpc_network" {
   type = string
+  description = "id of the vpc network being used"
 }
 
 variable "subnet" {
   type = string
+  description = "id of the subnet being used"
 }
 
 variable "static_ip_01" {
   type = string
+  description = "static external ip address to be used by the vm"
 }
 
 variable "static_ip_02" {
   type = string
+  description = "static external ip address to be used by the vm"
+
 }
 
 variable "subnet_range" {
   type = string
+  description = "subnet range to be used by the vm"
 }

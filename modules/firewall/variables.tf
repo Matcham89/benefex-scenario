@@ -1,4 +1,4 @@
 variable "vpc_network" {
   type        = string
-  description = "vpc network"
+  description = "id of the vpc network"
 }
